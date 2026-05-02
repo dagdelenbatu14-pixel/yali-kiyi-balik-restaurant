@@ -1,82 +1,140 @@
 window.SITE_DATA = {
   brand: {
-    name: "Yalı Kıyı Balık Restaurant",
-    shortName: "Yalı Kıyı",
-    tagline: "Yalıkavak'ta deniz kenarında balık, meze ve gün batımı",
-    rating: "4.2",
-    reviews: "189",
-    price: "₺₺",
+    name: "Seyfi Balık Restaurant Yalıkavak",
+    shortName: "Seyfi Balık",
+    tagline: "Yalıkavak sahilinde taze balık, Ege mezeleri ve sıcak Bodrum akşamları",
+    rating: "4.1",
+    reviews: "72",
+    price: "₺1.000+",
+    category: "Deniz mahsulleri restoranı",
     phoneDisplay: "(0252) 385 41 43",
     phoneHref: "tel:02523854143",
-    address: "No:37, Yalıkavak, İskele Cd., 48990 Bodrum/Muğla",
-    hours: "Her gün 08:30 - 02:00",
-    instagram: "@yalikiyibalikrestaurant",
-    instagramUrl: "https://www.instagram.com/yalikiyibalikrestaurant/",
+    address: "Yalıkavak, 48400 Bodrum/Muğla",
+    plusCode: "474R+JV Bodrum, Muğla",
+    hours: "Her gün 03:00'e kadar açık",
+    serviceOptions: "İçeride servis · Arabaya teslim alma",
+    instagram: "@seyfibalikrestaurant",
+    instagramUrl: "https://www.instagram.com/seyfibalikrestaurant/",
     websiteUrl: "https://dagdelenbatu14-pixel.github.io/yali-kiyi-balik-restaurant/",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Yal%C4%B1%20K%C4%B1y%C4%B1%20Bal%C4%B1k%20Restaurant%20No%3A37%20Yal%C4%B1kavak%20%C4%B0skele%20Cd.%20Bodrum"
+    qrLandingUrl: "https://dagdelenbatu14-pixel.github.io/yali-kiyi-balik-restaurant/qr.html",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Seyfi%20Bal%C4%B1k%20Restaurant%20Yal%C4%B1kavak"
+  },
+  qr: {
+    menuUrl: "./menu.html",
+    websiteUrl: "./index.html",
+    landingUrl: "./qr.html",
+    cardUrl: "./qr-card.html",
+    pngUrl: "./assets/qr/seyfi-qr-menu.png",
+    svgUrl: "./assets/qr/seyfi-qr-menu.svg"
   },
   images: {
-    hero: "https://www.bodrummekanrehberi.com/m/restoran/yali-kiyi-balik-restaurant/images/yalikiyibalik-7.jpg",
-    reservation: "https://www.bodrummekanrehberi.com/m/restoran/yali-kiyi-balik-restaurant/images/yalikiyibalik-10.jpg",
+    hero: "./assets/seyfi-venue-wide.jpeg",
+    reservation: "./assets/instagram-menu/sunset.jpg",
+    menuBoard: "./assets/instagram-menu/karides-salatasi.jpg",
     venue: [
       {
-        src: "https://www.bodrummekanrehberi.com/m/restoran/yali-kiyi-balik-restaurant/images/yalikiyibalik-9.jpg",
-        alt: "Yalı Kıyı Balık Restaurant'ta denize sıfır gerçek sofra ve mavi deniz manzarası"
+        src: "./assets/seyfi-dining-room.jpeg",
+        alt: "Seyfi Balık Restaurant Yalıkavak deniz manzaralı iç salon ve hazırlanmış masalar"
       },
       {
-        src: "https://www.bodrummekanrehberi.com/m/restoran/yali-kiyi-balik-restaurant/images/yalikiyibalik-7.jpg",
-        alt: "Yalı Kıyı Balık Restaurant'ın gerçek gün batımı ve deniz kenarı masaları"
+        src: "./assets/instagram-menu/venue-floral-entry.jpg",
+        alt: "Seyfi Balık Restaurant Yalıkavak çiçekli giriş ve akşam atmosferi"
       },
       {
-        src: "https://www.bodrummekanrehberi.com/m/restoran/yali-kiyi-balik-restaurant/images/yalikiyibalik-10.jpg",
-        alt: "Yalı Kıyı Balık Restaurant'ta deniz manzaralı gerçek masa ve içecekler"
+        src: "./assets/instagram-menu/meze-vitrini.jpg",
+        alt: "Seyfi Balık Restaurant Yalıkavak günlük meze vitrini"
       }
     ]
   },
   featured: [
     {
-      name: "Soğuk Meze Tabağı",
-      description: "Ege otları, zeytinyağlılar ve rakı-balık sofrasını açan taze başlangıçlar.",
-      image: "https://images.pexels.com/photos/30750275/pexels-photo-30750275.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Profesyonel sunumlu Ege meze tabağı"
+      name: "Levrek Izgara",
+      description: "Deniz kenarında, ızgara izleri belirgin ve sade servis edilen taze levrek.",
+      image: "./assets/instagram-menu/levrek-izgara-whole.jpg",
+      alt: "Seyfi Balık Restaurant'ta levrek ızgara"
     },
     {
-      name: "Ahtapot Izgara",
-      description: "Yumuşak dokulu, hafif isli ve deniz karakteri güçlü ara sıcak.",
-      image: "https://images.pexels.com/photos/37068830/pexels-photo-37068830.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Profesyonel sunumlu ızgara ahtapot tabağı"
+      name: "Kalamar Tava",
+      description: "Çıtır dokulu, limon eşliğinde gelen Bodrum sahil klasiği.",
+      image: "./assets/instagram-menu/kalamar-tava.jpg",
+      alt: "Seyfi Balık Restaurant'ta kalamar tava"
     },
     {
-      name: "Yerli Kalamar",
-      description: "Çıtır, sıcak ve limon-sos eşliğiyle deniz kenarı masasının klasiği.",
-      image: "https://images.pexels.com/photos/30749018/pexels-photo-30749018.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Profesyonel sunumlu çıtır kalamar tabağı"
+      name: "Karides Tempura",
+      description: "İnce çıtırlık, şık sunum ve gün batımı ışığında modern deniz yorumu.",
+      image: "./assets/instagram-menu/karides-tempura.jpg",
+      alt: "Seyfi Balık Restaurant'ta karides tempura"
     },
     {
-      name: "Günün Balığı",
-      description: "Mevsimine göre seçilen, sade ve doğru pişmiş taze balık.",
-      image: "https://images.pexels.com/photos/28843593/pexels-photo-28843593.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Profesyonel sunumlu ızgara balık tabağı"
+      name: "Lakerda",
+      description: "Ev yapımı lakerda; havyar ve soğanla servis edilen güçlü meze imzası.",
+      image: "./assets/instagram-menu/lakerda.jpg",
+      alt: "Seyfi Balık Restaurant'ta lakerda"
     }
   ],
   menuCategories: [
     {
-      title: "Başlangıçlar",
+      title: "Soğuk Mezeler",
       items: [
         {
-          name: "Soğuk Meze Tabağı",
-          description: "Ege usulü zeytinyağlılar, yoğurtlu mezeler ve günlük taze seçimler.",
-          image: "https://images.pexels.com/photos/30750275/pexels-photo-30750275.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Meze Vitrini",
+          description: "Günlük hazırlanan soğuk mezeler; seçimler servis ekibinden öğrenilir.",
+          image: "./assets/instagram-menu/meze-vitrini.jpg"
         },
         {
           name: "Deniz Börülcesi",
-          description: "Limon, zeytinyağı ve sarımsakla ferah bir kıyı başlangıcı.",
-          image: "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=900&q=90"
+          description: "Zeytinyağı, sarımsak ve limonla hazırlanan ferah Ege mezesi.",
+          image: "./assets/instagram-menu/deniz-borulcesi.jpg"
         },
         {
-          name: "Çoban Salata",
-          description: "Domates, salatalık, soğan ve taze otlarla klasik eşlikçi.",
-          image: "https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Kabak Çiçeği Dolması",
+          description: "İncecik kabak çiçeklerinin iç harçla doldurulup zeytinyağında pişen zarif hali.",
+          image: "./assets/instagram-menu/kabak-cicegi-dolmasi.jpg"
+        },
+        {
+          name: "Girit Mezesi",
+          description: "Zeytinyağı, beyaz peynir ve dereotunun rakı-balık sofrasına yakışan yorumu.",
+          image: "./assets/instagram-menu/girit-mezesi.jpg"
+        },
+        {
+          name: "Şaraplı Pancar",
+          description: "Kırmızı şarapla marine edilmiş pancar; renkli ve dengeli bir soğuk başlangıç.",
+          image: "./assets/instagram-menu/sarapli-pancar.jpg"
+        },
+        {
+          name: "Lakerda",
+          description: "Ev yapımı lakerda; havyar ve soğanla servis edilen rafine balık mezesi.",
+          image: "./assets/instagram-menu/lakerda.jpg"
+        },
+        {
+          name: "Ahtapot Salata",
+          description: "Ahtapot, domates, biber ve zeytinyağıyla hazırlanan taze deniz salatası.",
+          image: "./assets/instagram-menu/ahtapot-salata.jpg"
+        },
+        {
+          name: "Karides Salatası",
+          description: "Karides, roka, domates ve kırmızı soğanla imza soğuk salata.",
+          image: "./assets/instagram-menu/karides-salatasi.jpg"
+        },
+        {
+          name: "Humus Pastırmalı",
+          description: "Klasik humusa çıtır pastırma dokunuşu; yoğun ve paylaşmalık bir meze.",
+          image: "./assets/instagram-menu/humus-pastirma.jpg"
+        },
+        {
+          name: "İstiridye",
+          description: "Buz üzerinde servis edilen, masaya şıklık katan özel deniz lezzeti.",
+          image: "./assets/instagram-menu/istiridye.jpg"
+        },
+        {
+          name: "Levrek Marin",
+          description: "Marine levrek; serin, dengeli ve deniz kokusu taşıyan rafine tabak.",
+          image: "./assets/professional-menu/levrek-marin.jpg"
+        },
+        {
+          name: "Midye Dolma",
+          description: "Baharatlı iç pilavla doldurulmuş, adet servis edilen klasik deniz lezzeti.",
+          image: "./assets/professional-menu/midye-dolma.jpg"
         }
       ]
     },
@@ -84,39 +142,134 @@ window.SITE_DATA = {
       title: "Ara Sıcaklar",
       items: [
         {
-          name: "Ahtapot Izgara",
-          description: "Izgara dokusu belirgin, zeytinyağı ve limonla dengelenmiş tabak.",
-          image: "https://images.pexels.com/photos/37068830/pexels-photo-37068830.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Karides Tempura",
+          description: "Çıtır kaplama ve özel sosla servis edilen modern karides yorumu.",
+          image: "./assets/instagram-menu/karides-tempura.jpg"
         },
         {
-          name: "Yerli Kalamar",
-          description: "Çıtır kaplama, hafif sos ve limonla servis edilir.",
-          image: "https://images.pexels.com/photos/30749018/pexels-photo-30749018.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Tempura",
+          description: "Seyfi'nin özel tempura dokunuşu; hafif, çıtır ve güçlü sunumlu.",
+          image: "./assets/instagram-menu/tempura-special.jpg"
+        },
+        {
+          name: "Kalamar Tava",
+          description: "Dışı çıtır, içi yumuşak; limon ve sos eşliğinde servis edilir.",
+          image: "./assets/instagram-menu/kalamar-tava.jpg"
+        },
+        {
+          name: "Kalamar Izgara",
+          description: "Izgara kalamar; sebze garnitürü ve hafif sosla daha rafine bir ara sıcak.",
+          image: "./assets/instagram-menu/kalamar-izgara.jpg"
+        },
+        {
+          name: "Kalamar Izgara Özel",
+          description: "Sahil masasında sunulan özel ızgara kalamar tabağı.",
+          image: "./assets/instagram-menu/kalamar-izgara-plated.jpg"
+        },
+        {
+          name: "Paçanga & Sigara Böreği",
+          description: "Sıcak, çıtır ve paylaşmalık; klasik börek tabağının Seyfi sunumu.",
+          image: "./assets/instagram-menu/pacanga-sigara-boregi.jpg"
+        },
+        {
+          name: "Şevketi Bostan",
+          description: "Ege otlarının sıcak tabakta yoğurt ve baharatla buluşan güçlü yorumu.",
+          image: "./assets/instagram-menu/seketi-bostan.jpg"
+        },
+        {
+          name: "Karides Tereyağlı",
+          description: "Tereyağı ve sarımsakla sıcak servis edilen yoğun aromalı karides.",
+          image: "https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=900"
         },
         {
           name: "Karides Güveç",
-          description: "Tereyağı, sarımsak ve hafif baharatla sıcak servis.",
-          image: "https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=900"
+          description: "Fırın sıcaklığında, soslu ve iştah açıcı deniz mahsulü klasiği.",
+          image: "./assets/professional-menu/karides-guvec.jpg"
+        },
+        {
+          name: "Ahtapot Izgara",
+          description: "Izgara dokusu belirgin, limon ve zeytinyağıyla dengelenmiş özel ara sıcak.",
+          image: "./assets/professional-menu/ahtapot-izgara.jpg"
         }
       ]
     },
     {
-      title: "Ana Yemekler",
+      title: "Günlük Balıklar ve Deniz Ürünleri",
       items: [
         {
-          name: "Günün Balığı",
-          description: "Mevsimine göre ızgara veya tavada, sade garnitürlerle.",
-          image: "https://images.pexels.com/photos/28843593/pexels-photo-28843593.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Günlük Mevsim Balıkları",
+          description: "Vitrindeki günlük çeşitler servis ekibi tarafından masada önerilir.",
+          image: "./assets/instagram-menu/sezonun-tazeleri.jpg"
         },
         {
           name: "Levrek Izgara",
-          description: "Hafif, dengeli ve deniz kenarı masasına yakışan klasik.",
-          image: "https://images.pexels.com/photos/37255815/pexels-photo-37255815.jpeg?auto=compress&cs=tinysrgb&w=900"
+          description: "Izgarada pişmiş levrek; sade garnitür ve limonla servis edilir.",
+          image: "./assets/instagram-menu/levrek-izgara-whole.jpg"
         },
         {
-          name: "Deniz Ürünleri Tabağı",
-          description: "Paylaşmalık seçki; kalamar, karides ve taze deniz lezzetleri.",
-          image: "https://images.pexels.com/photos/32962743/pexels-photo-32962743.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Levrek Izgara Fileto",
+          description: "Balık formunda tabakta, paylaşmalık fileto sunumu.",
+          image: "./assets/instagram-menu/levrek-izgara-fillets.jpg"
+        },
+        {
+          name: "Fener Balığı",
+          description: "Denizin karakterli lezzetlerinden; günlük tedarik durumuna göre hazırlanır.",
+          image: "./assets/instagram-menu/fener-baligi.jpg"
+        },
+        {
+          name: "Kırlangıç Balığı",
+          description: "Beyaz ve sıkı etiyle ızgara veya buğulama için ideal günlük balık.",
+          image: "./assets/instagram-menu/kirlangic-baligi.jpg"
+        },
+        {
+          name: "Kerevit Böceği",
+          description: "Kabuklu sevenler için aroması güçlü, özel ve gösterişli deniz ürünü.",
+          image: "./assets/instagram-menu/kerevit-bocegi.jpg"
+        },
+        {
+          name: "Orkinos",
+          description: "Usta ellerde hazırlanan, güçlü aromalı günlük deniz lezzeti.",
+          image: "https://images.pexels.com/photos/6424962/pexels-photo-6424962.jpeg?auto=compress&cs=tinysrgb&w=900"
+        },
+        {
+          name: "Taze Balık Seçkisi",
+          description: "Buz üzerinde sunulan taze balık ve kabuklu deniz ürünleri seçimi.",
+          image: "./assets/instagram-menu/sezonun-tazeleri.jpg"
+        },
+        {
+          name: "Deniz Mahsulleri Tabağı",
+          description: "Paylaşmalık premium sunum; kabuklu deniz ürünleri ve garnitürlerle.",
+          image: "./assets/seyfi-lobster-platter.jpeg"
+        }
+      ]
+    },
+    {
+      title: "Salatalar ve Makarnalar",
+      items: [
+        {
+          name: "Karides Salatası",
+          description: "Ezine peyniri, roka ve kırmızı soğan eşliğinde servis edilen özel salata.",
+          image: "./assets/instagram-menu/karides-salatasi.jpg"
+        },
+        {
+          name: "Karışık Salata",
+          description: "Taze sebzelerle hazırlanan klasik masa eşlikçisi.",
+          image: "https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=900"
+        },
+        {
+          name: "Roka Domates Peynirli Salata",
+          description: "Balığa en çok yakışan roka, domates ve peynir dengesi.",
+          image: "https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?auto=compress&cs=tinysrgb&w=900"
+        },
+        {
+          name: "Spagetti Napolitan",
+          description: "Domates soslu, sade ve çocuklu aileler için de rahat bir seçenek.",
+          image: "https://images.pexels.com/photos/1527603/pexels-photo-1527603.jpeg?auto=compress&cs=tinysrgb&w=900"
+        },
+        {
+          name: "Acı Domates Soslu Penne",
+          description: "Penne arrabbiata yorumu; acı, domates ve sıcak servis.",
+          image: "https://images.pexels.com/photos/6287525/pexels-photo-6287525.jpeg?auto=compress&cs=tinysrgb&w=900"
         }
       ]
     },
@@ -124,14 +277,19 @@ window.SITE_DATA = {
       title: "Tatlılar",
       items: [
         {
-          name: "Fırın Helva",
-          description: "Balık sofrasının sıcak ve yoğun finali.",
-          image: "https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Sufle",
+          description: "Çikolatalı veya tahinli seçenekle sıcak, yoğun ve etkileyici final.",
+          image: "./assets/professional-menu/sufle.jpg"
         },
         {
-          name: "Mevsim Meyveleri",
-          description: "Serin, sade ve hafif bir kapanış.",
-          image: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Dondurmalı İrmik Helvası",
+          description: "Sıcak irmik helvası ve serin dondurma dengesi.",
+          image: "https://images.pexels.com/photos/461430/pexels-photo-461430.jpeg?auto=compress&cs=tinysrgb&w=900"
+        },
+        {
+          name: "Fırında Cevizli Tahin Helva",
+          description: "Balık sofrasının geleneksel, sıcak ve tok kapanışı.",
+          image: "./assets/professional-menu/firinda-tahin-helva.jpg"
         }
       ]
     },
@@ -139,30 +297,40 @@ window.SITE_DATA = {
       title: "İçecekler",
       items: [
         {
-          name: "Rakı Servisi",
-          description: "Rakı-balık ritüelinin klasik eşlikçisi.",
-          image: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Gündüz Rakısı",
+          description: "Deniz kenarında meze ve gün ışığıyla tamamlanan klasik rakı-balık keyfi.",
+          image: "./assets/instagram-menu/gunduz-rakisi.jpg"
         },
         {
-          name: "Beyaz Şarap",
-          description: "Soğuk mezeler ve balıkla uyumlu ferah seçimler.",
-          image: "https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=900"
+          name: "Meşrubatlar",
+          description: "Coca-Cola, Fanta, Sprite ve Ice Tea çeşitleri.",
+          image: "https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg?auto=compress&cs=tinysrgb&w=900"
+        },
+        {
+          name: "Soda ve Su",
+          description: "Sade, hızlı ve ferahlatıcı sofra eşlikçileri.",
+          image: "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=900"
+        },
+        {
+          name: "Şalgam ve Meyve Suyu",
+          description: "Tabeladaki alkolsüz içecek seçeneklerinden seçkiler.",
+          image: "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900"
         }
       ]
     }
   ],
   reviews: [
     {
-      quote: "Yemekler kesinlikle 5 üzerinden 5. Mezeler müthiş, bütün mezeler inanılmaz lezzetli.",
-      name: "Onur C."
+      quote: "Yalıkavak'ta denize sıfır, samimi ve kaliteli bir akşam yemeği deneyimi yaşamak isteyenler için güzel bir seçenek.",
+      name: "Vural Ş."
     },
     {
-      quote: "Bodrum'da en sevdiğim yerlerden biri. Mezeler çok çeşitli, balıklar çok güzel.",
-      name: "Anıl Ö."
+      quote: "Mekan konumunu çok beğendik; Yalıkavak'ın sessizliği eşliğinde keyifli bir deneyim oldu.",
+      name: "Ahmetcan K."
     },
     {
-      quote: "Ahtapot ve yerli kalamarı kesinlikle tavsiye ederim. Deniz kenarında çok keyifli bir sofra.",
-      name: "Misafir Yorumu"
+      quote: "Tek başıma gelmeme rağmen dört dörtlük servis ve hizmet verdiler; yemek muhteşemdi.",
+      name: "Serkan V."
     }
   ]
 };

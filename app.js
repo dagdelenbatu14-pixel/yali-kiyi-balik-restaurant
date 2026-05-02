@@ -3,6 +3,7 @@
   const data = window.SITE_DATA;
   const page = document.body.dataset.page || "home";
   const root = ReactDOM.createRoot(document.getElementById("root"));
+  const hasPhone = data.brand.phoneHref.startsWith("tel:");
 
   function asset(path) {
     return path;
@@ -44,9 +45,9 @@
           h("a", { href: asset("./index.html#experience"), className: "transition hover:text-gold" }, "Deneyim"),
           h("a", { href: asset("./menu.html"), className: "transition hover:text-gold" }, "Menü"),
           h("a", { href: asset("./qr.html"), className: "transition hover:text-gold" }, "QR"),
-          h("a", { href: data.brand.phoneHref, className: "border border-gold/50 px-4 py-2 text-gold transition hover:bg-gold hover:text-ink" }, "Rezervasyon")
+          h("a", { href: data.brand.phoneHref, className: "border border-gold/50 px-4 py-2 text-gold transition hover:bg-gold hover:text-ink" }, hasPhone ? "Rezervasyon" : "İletişim")
         ),
-        h("a", { href: data.brand.phoneHref, className: "border border-gold/50 px-4 py-2 text-sm font-black text-gold transition hover:bg-gold hover:text-ink md:hidden" }, "Ara")
+        h("a", { href: data.brand.phoneHref, className: "border border-gold/50 px-4 py-2 text-sm font-black text-gold transition hover:bg-gold hover:text-ink md:hidden" }, hasPhone ? "Ara" : "Harita")
       )
     );
   }
@@ -82,11 +83,11 @@
             `⭐ ${data.brand.rating} · ${data.brand.reviews} Değerlendirme · ${data.brand.price}`
           ),
           h("h1", { className: "font-display text-6xl font-bold leading-none text-pearl md:text-8xl lg:text-9xl" },
-            "Denize Sıfır Bodrum Sofrası"
+            "Yalıkavak'ta Denizle Aynı Masada"
           ),
           h("p", { className: "mt-7 max-w-2xl text-lg leading-8 text-pearl/78 md:text-xl" }, data.brand.tagline),
           h("div", { className: "mt-9 flex flex-col gap-3 sm:flex-row" },
-            h(Button, { href: data.brand.phoneHref }, "Rezervasyon Yap"),
+            h(Button, { href: data.brand.phoneHref }, hasPhone ? "Rezervasyon Yap" : "Yol Tarifi / İletişim"),
             h(Button, { href: asset("./menu.html"), variant: "secondary" }, "Dijital Menüyü Aç"),
             h(Button, { href: asset("./qr.html"), variant: "secondary" }, "QR Sayfası")
           )
@@ -99,8 +100,8 @@
     const items = [
       ["Konum", data.brand.address],
       ["Saatler", data.brand.hours],
-      ["Telefon", data.brand.phoneDisplay],
-      ["Hızlı Erişim", "Menü · Instagram · Website"]
+      [hasPhone ? "Telefon" : "İletişim", data.brand.phoneDisplay],
+      ["Servis", data.brand.serviceOptions || "Menü · Instagram · Website"]
     ];
     return h("section", { className: "border-y border-gold/10 bg-ink px-5 py-5" },
       h("div", { className: "mx-auto grid max-w-6xl gap-3 md:grid-cols-4" },
@@ -117,8 +118,8 @@
       h("div", { className: "mx-auto max-w-6xl" },
         h(SectionTitle, {
           eyebrow: "Bodrum kıyısında",
-          title: "Sakin Lüks, Gerçek Manzara",
-          text: "Mekan görselleri Yalı Kıyı'nın gerçek deniz kenarı atmosferinden, menü görselleri ise premium ve isimleriyle uyumlu profesyonel yemek fotoğraflarından seçildi."
+          title: "Seyfi'nin Kıyı Ritüeli",
+          text: "Gerçek Seyfi fotoğrafları; çiçekli akşam yolu, deniz manzaralı salon, günlük balık vitrini ve gün batımında hazırlanan sofralarla Yalıkavak hissini birebir taşır."
         }),
         h("div", { className: "fade-in grid min-h-[560px] gap-4 lg:grid-cols-[1fr_.72fr]" },
           h("img", imgProps(data.images.venue[0].src, data.images.venue[0].alt, "h-full min-h-[420px] w-full border border-gold/15 object-cover")),
@@ -137,7 +138,7 @@
         h(SectionTitle, {
           eyebrow: "Homepage menü",
           title: "Öne Çıkan Lezzetler",
-          text: "Balık, meze, ahtapot ve kalamar odağında, sade ama iştah açıcı bir seçki."
+          text: "Tabeladaki deniz ürünleri çizgisinden seçilmiş, görselleri Seyfi'nin kendi servis atmosferinden gelen iştah açıcı bir seçki."
         }),
         h("div", { className: "grid gap-5 md:grid-cols-2 lg:grid-cols-4" },
           data.featured.map((item) => h("article", { key: item.name, className: "fade-in group overflow-hidden border border-gold/15 bg-night shadow-2xl transition duration-300 hover:-translate-y-2 hover:border-gold/50" },
@@ -185,7 +186,7 @@
         h("h2", { className: "font-display text-5xl font-bold leading-none text-pearl md:text-7xl" }, "Gün Batımı İçin Masanızı Ayırtın"),
         h("p", { className: "mt-6 max-w-2xl text-lg leading-8 text-pearl/75" }, "Deniz kenarında soğuk meze, ahtapot, yerli kalamar ve günlük balık için hemen ulaşın."),
         h("div", { className: "mt-9 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row" },
-          h(Button, { href: data.brand.phoneHref, extra: "w-full sm:w-auto" }, `Ara: ${data.brand.phoneDisplay}`),
+          h(Button, { href: data.brand.phoneHref, extra: "w-full sm:w-auto" }, hasPhone ? `Ara: ${data.brand.phoneDisplay}` : "İletişim / Yol Tarifi"),
           h(Button, { href: data.brand.mapsUrl, variant: "secondary", extra: "w-full sm:w-auto" }, "Yol Tarifi Al")
         )
       )
@@ -201,6 +202,7 @@
         ),
         h("div", { className: "text-sm leading-7 text-pearl/65" },
           h("p", null, data.brand.address),
+          data.brand.plusCode ? h("p", null, data.brand.plusCode) : null,
           h("p", null, data.brand.hours),
           h("a", { href: data.brand.phoneHref, className: "font-bold text-gold" }, data.brand.phoneDisplay)
         ),
@@ -232,19 +234,34 @@
     return h(React.Fragment, null,
       h(Nav),
       h("main", { className: "bg-ink px-5 pt-32" },
-        h("section", { className: "mx-auto max-w-6xl pb-14" },
-          h("p", { className: "mb-4 text-xs font-black uppercase tracking-[.22em] text-gold" }, "Dijital menü"),
-          h("h1", { className: "font-display text-6xl font-bold leading-none text-pearl md:text-8xl" }, "Menü"),
-          h("p", { className: "mt-6 max-w-2xl text-lg leading-8 text-pearl/70" }, "Bu yapı tek config dosyasından yönetilir; kategori, ürün adı, açıklama ve görsel kolayca güncellenebilir."),
-          h("div", { className: "mt-8 flex flex-wrap gap-3" },
-            data.menuCategories.map((cat) => h("a", { key: cat.title, href: `#${cat.title}`, className: "border border-gold/25 px-4 py-2 text-sm font-black text-gold transition hover:bg-gold hover:text-ink" }, cat.title))
+        h("section", { className: "mx-auto grid max-w-6xl gap-8 pb-14 lg:grid-cols-[1fr_.72fr] lg:items-end" },
+          h("div", null,
+            h("p", { className: "mb-4 text-xs font-black uppercase tracking-[.22em] text-gold" }, "Dijital menü"),
+            h("h1", { className: "font-display text-6xl font-bold leading-none text-pearl md:text-8xl" }, "Seyfi Menü"),
+            h("p", { className: "mt-6 max-w-2xl text-lg leading-8 text-pearl/70" }, "Menü tabelasındaki gerçek kategoriler ve ürün isimleriyle hazırlandı. Günlük balık seçenekleri ve fiyatlar mevsime göre servis ekibi tarafından teyit edilir."),
+            h("div", { className: "mt-8 flex flex-wrap gap-3" },
+              data.menuCategories.map((cat) => h("a", { key: cat.title, href: `#${cat.title}`, className: "border border-gold/25 px-4 py-2 text-sm font-black text-gold transition hover:bg-gold hover:text-ink" }, cat.title))
+            )
+          ),
+          h("img", imgProps(data.images.menuBoard, "Seyfi Balık Restaurant Yalıkavak deniz kenarı menü sofrası", "fade-in aspect-[4/5] w-full border border-gold/15 object-cover shadow-2xl"))
+        ),
+        h("section", { className: "mx-auto max-w-6xl border-y border-gold/10 py-8" },
+          h("div", { className: "fade-in grid gap-4 text-sm font-bold text-pearl/72 md:grid-cols-3" },
+            h("p", null, "Günlük mevsim balıkları servis ekibinden sorulur."),
+            h("p", null, "Fiyatlar sezon ve ürün tedarikine göre değişebilir."),
+            h("p", null, "Rezervasyon ve yol tarifi için QR sayfası kullanılabilir.")
           )
         ),
         data.menuCategories.map((cat) => h("section", { key: cat.title, id: cat.title, className: "mx-auto max-w-6xl border-t border-gold/10 py-14" },
           h("h2", { className: "fade-in font-display text-4xl font-bold text-pearl md:text-5xl" }, cat.title),
-          h("div", { className: "mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3" },
-            cat.items.map((item) => h("article", { key: `${cat.title}-${item.name}`, className: "fade-in overflow-hidden border border-gold/15 bg-night shadow-2xl transition duration-300 hover:-translate-y-1 hover:border-gold/45" },
-              h("img", imgProps(item.image, item.name, "aspect-[4/3] w-full object-cover")),
+          h("div", { className: "mt-8 grid gap-4 md:grid-cols-2" },
+            cat.items.map((item) => h("article", {
+              key: `${cat.title}-${item.name}`,
+              className: item.image
+                ? "fade-in grid overflow-hidden border border-gold/15 bg-night shadow-2xl transition duration-300 hover:-translate-y-1 hover:border-gold/45 sm:grid-cols-[170px_1fr]"
+                : "fade-in overflow-hidden border border-gold/15 bg-night shadow-2xl transition duration-300 hover:-translate-y-1 hover:border-gold/45"
+            },
+              item.image ? h("img", imgProps(item.image, item.name, "h-full min-h-40 w-full object-cover")) : null,
               h("div", { className: "p-6" },
                 h("h3", { className: "font-display text-2xl font-bold text-pearl" }, item.name),
                 h("p", { className: "mt-3 text-sm leading-6 text-pearl/68" }, item.description)
@@ -281,7 +298,7 @@
             )
           ))
         ),
-        h("a", { href: data.brand.phoneHref, className: "mt-6 flex min-h-14 items-center justify-center bg-gold px-6 text-sm font-black text-ink transition hover:-translate-y-1" }, `Rezervasyon: ${data.brand.phoneDisplay}`)
+        h("a", { href: data.brand.phoneHref, className: "mt-6 flex min-h-14 items-center justify-center bg-gold px-6 text-sm font-black text-ink transition hover:-translate-y-1" }, hasPhone ? `Rezervasyon: ${data.brand.phoneDisplay}` : "İletişim / Yol Tarifi")
       )
     );
   }

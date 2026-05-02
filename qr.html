@@ -3,32 +3,197 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yalı Kıyı Balık Restaurant hızlı erişim sayfası.">
-  <title>QR Erişim | Yalı Kıyı Balık Restaurant</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { display: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] },
-          colors: { ink: '#070A0A', night: '#101817', pearl: '#F8F2E8', sand: '#E7D8BE', gold: '#C9A96E', sea: '#12383F' }
-        }
-      }
-    };
-  </script>
+  <meta name="description" content="Seyfi Balık Restaurant Yalıkavak QR hızlı erişim sayfası.">
+  <meta property="og:title" content="Seyfi Balık Restaurant Yalıkavak QR Menü">
+  <meta property="og:description" content="Seyfi Balık Restaurant Yalıkavak dijital menü, Instagram ve web sitesi hızlı erişim sayfası.">
+  <meta property="og:type" content="website">
+  <meta name="apple-mobile-web-app-title" content="Seyfi Balık QR Menü">
+  <title>QR Menü | Seyfi Balık Restaurant Yalıkavak</title>
+  <script src="./site-data.js"></script>
   <style>
-    body { background: #070A0A; }
-    .glass { background: rgba(16, 24, 23, .72); backdrop-filter: blur(18px); }
+    :root {
+      --ink: #060807;
+      --night: #101817;
+      --pearl: #f8f2e8;
+      --muted: rgba(248, 242, 232, .72);
+      --gold: #c9a96e;
+      --line: rgba(201, 169, 110, .28);
+    }
+
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--ink); }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--pearl);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(rgba(6, 8, 7, .62), rgba(6, 8, 7, .86)),
+        url("./assets/instagram-menu/venue-floral-entry.jpg") center/cover no-repeat;
+    }
+
+    main {
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+      padding: 22px;
+    }
+
+    .card {
+      width: min(100%, 430px);
+      border: 1px solid var(--line);
+      background: rgba(16, 24, 23, .78);
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .42);
+      padding: 28px;
+      backdrop-filter: blur(18px);
+    }
+
+    .mark {
+      display: grid;
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 20px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .22em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 12vw, 54px);
+      line-height: .95;
+      text-align: center;
+    }
+
+    .lead {
+      max-width: 310px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .action {
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      border: 1px solid var(--line);
+      background: rgba(6, 8, 7, .62);
+      color: var(--pearl);
+      padding: 17px 18px;
+      text-decoration: none;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease, color .18s ease;
+    }
+
+    .action:first-child {
+      border-color: rgba(201, 169, 110, .86);
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .action:active { transform: scale(.985); }
+    @media (hover: hover) {
+      .action:hover {
+        border-color: var(--gold);
+        background: var(--gold);
+        color: var(--ink);
+        transform: translateY(-2px);
+      }
+    }
+
+    .action strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.1;
+    }
+
+    .action span {
+      display: block;
+      margin-top: 5px;
+      font-size: 13px;
+      opacity: .74;
+    }
+
+    .arrow {
+      flex: 0 0 auto;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .meta {
+      margin: 22px 0 0;
+      color: rgba(248, 242, 232, .62);
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
   </style>
 </head>
-<body data-page="qr" class="font-sans text-pearl antialiased">
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="./site-data.js"></script>
-  <script src="./app.js"></script>
+<body>
+  <main>
+    <section class="card" aria-label="Seyfi Balık QR hızlı erişim">
+      <div class="mark" aria-hidden="true">S</div>
+      <p class="eyebrow">QR hızlı erişim</p>
+      <h1 id="restaurant-name">Seyfi Balık</h1>
+      <p class="lead">Hoş geldiniz. Dijital menüye, Instagram sayfasına ve web sitesine tek dokunuşla ulaşabilirsiniz.</p>
+
+      <nav class="actions" aria-label="QR bağlantıları">
+        <a class="action" id="menu-link" href="./menu.html">
+          <span><strong>Menüyü Gör</strong><span>Dijital menüye hemen geç</span></span>
+          <b class="arrow" aria-hidden="true">›</b>
+        </a>
+        <a class="action" id="instagram-link" href="https://www.instagram.com/seyfibalikrestaurant/" rel="noopener">
+          <span><strong>Instagram</strong><span id="instagram-label">@seyfibalikrestaurant</span></span>
+          <b class="arrow" aria-hidden="true">›</b>
+        </a>
+        <a class="action" id="website-link" href="./index.html">
+          <span><strong>Web Sitesi</strong><span>Ana sayfaya dön</span></span>
+          <b class="arrow" aria-hidden="true">›</b>
+        </a>
+      </nav>
+
+      <p class="meta" id="restaurant-meta">Yalıkavak, Bodrum · Günlük taze deniz ürünleri</p>
+    </section>
+  </main>
+
+  <script>
+    const data = window.SITE_DATA || {};
+    const brand = data.brand || {};
+    const qr = data.qr || {};
+
+    document.title = `QR Menü | ${brand.name || "Seyfi Balık Restaurant Yalıkavak"}`;
+    document.getElementById("restaurant-name").textContent = brand.shortName || brand.name || "Seyfi Balık";
+    document.getElementById("instagram-label").textContent = brand.instagram || "Instagram";
+    document.getElementById("restaurant-meta").textContent = `${brand.address || "Yalıkavak, Bodrum"} · ${brand.hours || "Günlük taze deniz ürünleri"}`;
+    document.getElementById("menu-link").href = qr.menuUrl || "./menu.html";
+    document.getElementById("instagram-link").href = brand.instagramUrl || "#";
+    document.getElementById("website-link").href = qr.websiteUrl || "./index.html";
+  </script>
 </body>
 </html>
