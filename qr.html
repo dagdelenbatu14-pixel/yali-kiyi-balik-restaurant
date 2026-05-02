@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yalıkavak'ta deniz kenarında premium balık, meze ve gün batımı deneyimi.">
-  <title>Yalı Kıyı Balık Restaurant | Luxury Bodrum Seafood</title>
+  <meta name="description" content="Yalı Kıyı Balık Restaurant hızlı erişim sayfası.">
+  <title>QR Erişim | Yalı Kıyı Balık Restaurant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -13,31 +13,18 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            display: ['Playfair Display', 'serif'],
-            sans: ['Inter', 'sans-serif']
-          },
-          colors: {
-            ink: '#070A0A',
-            night: '#101817',
-            pearl: '#F8F2E8',
-            sand: '#E7D8BE',
-            gold: '#C9A96E',
-            sea: '#12383F'
-          }
+          fontFamily: { display: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] },
+          colors: { ink: '#070A0A', night: '#101817', pearl: '#F8F2E8', sand: '#E7D8BE', gold: '#C9A96E', sea: '#12383F' }
         }
       }
     };
   </script>
   <style>
-    html { scroll-behavior: smooth; }
     body { background: #070A0A; }
-    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .75s ease, transform .75s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
     .glass { background: rgba(16, 24, 23, .72); backdrop-filter: blur(18px); }
   </style>
 </head>
-<body data-page="home" class="font-sans text-pearl antialiased">
+<body data-page="qr" class="font-sans text-pearl antialiased">
   <div id="root"></div>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
