@@ -412,54 +412,14 @@ window.SITE_DATA = {
       title: "Günlük Balıklar ve Deniz Ürünleri",
       items: [
         {
-          name: "Günlük Mevsim Balıkları",
-          description: "Vitrindeki günlük çeşitler servis ekibi tarafından masada önerilir.",
-          image: "./assets/instagram-menu/sezonun-tazeleri.jpg"
-        },
-        {
-          name: "Levrek Izgara",
-          description: "Izgarada pişmiş levrek; sade garnitür ve limonla servis edilir.",
-          image: "./assets/instagram-menu/levrek-izgara-whole.jpg"
-        },
-        {
-          name: "Levrek Izgara Fileto",
-          description: "Balık formunda tabakta, paylaşmalık fileto sunumu.",
-          image: "./assets/instagram-menu/levrek-izgara-fillets.jpg"
-        },
-        {
-          name: "Fener Balığı",
-          description: "Denizin karakterli lezzetlerinden; günlük tedarik durumuna göre hazırlanır.",
-          image: "./assets/instagram-menu/fener-baligi.jpg"
-        },
-        {
-          name: "Kırlangıç Balığı",
-          description: "Beyaz ve sıkı etiyle ızgara veya buğulama için ideal günlük balık.",
-          image: "./assets/instagram-menu/kirlangic-baligi.jpg"
-        },
-        {
-          name: "Kerevit Böceği",
-          description: "Kabuklu sevenler için aroması güçlü, özel ve gösterişli deniz ürünü.",
-          image: "./assets/instagram-menu/kerevit-bocegi.jpg"
-        },
-        {
-          name: "Orkinos",
-          description: "Usta ellerde hazırlanan, güçlü aromalı günlük deniz lezzeti.",
-          image: "https://images.pexels.com/photos/6424962/pexels-photo-6424962.jpeg?auto=compress&cs=tinysrgb&w=900"
-        },
-        {
-          name: "Taze Balık Seçkisi",
-          description: "Buz üzerinde sunulan taze balık ve kabuklu deniz ürünleri seçimi.",
-          image: "./assets/instagram-menu/sezonun-tazeleri.jpg"
-        },
-        {
-          name: "Deniz Mahsulleri Tabağı",
-          description: "Paylaşmalık premium sunum; kabuklu deniz ürünleri ve garnitürlerle.",
-          image: "./assets/seyfi-lobster-platter.jpeg"
+          name: "Günlük balık çeşitlerimiz için servis personelimiz yardımcı olacaktır",
+          description: "",
+          image: ""
         }
       ]
     },
     {
-      title: "Salatalar ve Makarnalar",
+      title: "Salatalar",
       items: [
         {
           name: "Karides Salatası",
@@ -505,7 +465,12 @@ window.SITE_DATA = {
           name: "İstanbul Salata",
           description: "Zengin garnitürlerle hazırlanan, sofraya renk katan salata.",
           image: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=900"
-        },
+        }
+      ]
+    },
+    {
+      title: "Makarnalar",
+      items: [
         {
           name: "Spagetti Napolitan",
           description: "Domates soslu, sade ve çocuklu aileler için de rahat bir seçenek.",
@@ -525,16 +490,6 @@ window.SITE_DATA = {
           name: "Köfteli Spagetti",
           description: "Köfte ve domates sosla doyurucu spagetti tabağı.",
           image: "https://images.pexels.com/photos/6287525/pexels-photo-6287525.jpeg?auto=compress&cs=tinysrgb&w=900"
-        },
-        {
-          name: "Fettuccini Alfredo",
-          description: "Kremalı sosla hazırlanan yumuşak ve zengin makarna.",
-          image: "https://images.pexels.com/photos/1527603/pexels-photo-1527603.jpeg?auto=compress&cs=tinysrgb&w=900"
-        },
-        {
-          name: "Deniz Mahsullü Spagetti",
-          description: "Deniz ürünleriyle hazırlanan aromatik ve sıcak makarna.",
-          image: "https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=900"
         }
       ]
     },
