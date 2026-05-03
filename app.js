@@ -254,18 +254,12 @@
         ),
         data.menuCategories.map((cat) => h("section", { key: cat.title, id: cat.title, className: "mx-auto max-w-6xl border-t border-gold/10 py-14" },
           h("h2", { className: "fade-in font-display text-4xl font-bold text-pearl md:text-5xl" }, cat.title),
-          h("div", { className: "mt-8 grid gap-4 md:grid-cols-2" },
+          h("div", { className: "mt-8 grid gap-3 md:grid-cols-2" },
             cat.items.map((item) => h("article", {
               key: `${cat.title}-${item.name}`,
-              className: item.image
-                ? "fade-in grid overflow-hidden border border-gold/15 bg-night shadow-2xl transition duration-300 hover:-translate-y-1 hover:border-gold/45 sm:grid-cols-[170px_1fr]"
-                : "fade-in overflow-hidden border border-gold/15 bg-night shadow-2xl transition duration-300 hover:-translate-y-1 hover:border-gold/45"
+              className: "fade-in border border-gold/15 bg-night/80 px-5 py-4 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-gold/45"
             },
-              item.image ? h("img", imgProps(item.image, item.name, "h-full min-h-40 w-full object-cover")) : null,
-              h("div", { className: "p-6" },
-                h("h3", { className: "font-display text-2xl font-bold text-pearl" }, item.name),
-                h("p", { className: "mt-3 text-sm leading-6 text-pearl/68" }, item.description)
-              )
+              h("h3", { className: "font-display text-2xl font-bold text-pearl" }, item.name)
             ))
           )
         ))

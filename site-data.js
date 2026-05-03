@@ -607,26 +607,6 @@ window.SITE_DATA = {
       title: "İçecekler",
       items: [
         {
-          name: "Gündüz Rakısı",
-          description: "Deniz kenarında meze ve gün ışığıyla tamamlanan klasik rakı-balık keyfi.",
-          image: "./assets/instagram-menu/gunduz-rakisi.jpg"
-        },
-        {
-          name: "Meşrubatlar",
-          description: "Coca-Cola, Fanta, Sprite ve Ice Tea çeşitleri.",
-          image: "https://images.pexels.com/photos/2775860/pexels-photo-2775860.jpeg?auto=compress&cs=tinysrgb&w=900"
-        },
-        {
-          name: "Soda ve Su",
-          description: "Sade, hızlı ve ferahlatıcı sofra eşlikçileri.",
-          image: "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=900"
-        },
-        {
-          name: "Şalgam ve Meyve Suyu",
-          description: "Tabeladaki alkolsüz içecek seçeneklerinden seçkiler.",
-          image: "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900"
-        },
-        {
           name: "Coca-Cola",
           description: "Klasik gazlı içecek seçeneği.",
           image: "https://images.pexels.com/photos/2668308/pexels-photo-2668308.jpeg?auto=compress&cs=tinysrgb&w=900"
@@ -655,6 +635,11 @@ window.SITE_DATA = {
           name: "Meyve Suları",
           description: "Günün meyve suyu seçenekleri.",
           image: "https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=900"
+        },
+        {
+          name: "Soda",
+          description: "Ferahlatıcı soda seçeneği.",
+          image: "https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=900"
         },
         {
           name: "Şalgam",
